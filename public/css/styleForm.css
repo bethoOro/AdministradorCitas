@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/FondoEscritorio.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div.conten {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 550px;
+    padding: 10px;
+    background-image: url('../img/FondoMobil.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border: 1px solid #000; */
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 55px;
+}
+
+form {
+    width: 100%;
+}
+
+.campu {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.conten-img {
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+}
+
+.conten-img img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    padding: 7px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    background-color: brown;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+.button-register {
+    background: none;
+}
+
+.button-register button { background-color:  #70CAED; }
+
+.center {
+    margin: 0 auto;
+}
+
