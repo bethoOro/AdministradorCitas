@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro</title>
+    <link rel="stylesheet" href="resources/css/styleForm.css">
 </head>
 <body>
-    <form action="/register" method="post">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
-        <label for="app">Apellido Paterno</label>
-        <input type="text" name="app" id="app">
-        <label for="apm">Apellido Materno</label>
-        <input type="text" name="apm" id="apm">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label for="password">Pasword</label>
-        <input type="password" name="password" id="password">
-        <input type="submit" value="Register">
-    </form>
+    <header>
+        <div class="conten">
+            <form action="/register" method="post">
+                <div class="campu">
+                    <input type="text" name="name" id="name" placeholder="Nombre" required>
+                </div>
+                <div class="campu">
+                    <input type="text" name="app" id="app" placeholder="Apellido Paterno" required>
+                </div>
+                <div class="campu">
+                    <input type="text" name="apm" id="apm" placeholder="Apellido Materno" required>
+                </div>
+                <div class="campu">
+                    <input type="text" name="username" id="username" placeholder="Nombre de Usuario" required>
+                </div>
+                <div class="campu">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="campu">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                </div>
+                <div>
+                    <input type="submit" value="Register" class="button">
+                </div>
+            </form>
+            <div class="center">
+                <a href="login" class="button-register">
+                    <button class="button">Inicio Sesión</button>
+                </a>
+            </div>
+        </div>
+    </header>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

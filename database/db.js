@@ -1,3 +1,4 @@
+const { render } = require('ejs');
 const mysql = require('mysql');
 const query = 'SELECT * FROM cliente'
 

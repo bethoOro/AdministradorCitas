@@ -8,9 +8,6 @@ const horaInput = document.querySelector('#hora');
 const sintomasInput = document.querySelector('#sintomas');
 
 class Citas {
-    // constructor() {
-    //     this.citas = [];
-    // }
 
     async agregarCita(cita) {
         // this.citas = [...this.citas, cita];
@@ -106,12 +103,16 @@ class UI {
         divMensaje.textContent = mensaje;
 
         // Agregar al DOM
-        document.querySelector('#contenido').insertBefore(divMensaje, document.querySelector('.agregar-cita'));
+        if(document.querySelector('div.alert')) {
+            document.querySelector('div.alert').remove();
+        }
 
-        // Quitar la alerta después de 4 segundos
-        setTimeout(() => {
-            divMensaje.remove();
-        }, 1000);
+        document.querySelector('#contenido').insertBefore(divMensaje, document.querySelector('.agregar-cita'));
+            // Quitar la alerta después de 4 segundos
+            setTimeout(() => {
+                divMensaje.remove();
+            }, 3000);
+        
     }
 
     
