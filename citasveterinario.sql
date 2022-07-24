@@ -87,10 +87,10 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `Name`, `APP`, `APM`, `Email`, `Pass`, `username`) VALUES
-(12, 'Alberto', 'Gutierrez', 'Oropeza', 'bet68guti@gmail.com', '$2a$08$Wc0lX3aWaS/3eqQ9uthUWuD0FwV5SV0BSHzGqbkNf/mxdLHHnM.pO', 'AlbertoGuti'),
-(13, 'Alberto', 'Gutierrez', 'Oropeza', 'oropezabeto68@gmail.com', '$2a$08$r1/9Mq8RtN4eaiewbXtPReZp3Ba.GvZkn4tz9aGo1ikXiE5/lx8UO', 'betho'),
-(14, 'Alberto', 'Gutierrez', 'Oropeza', 'beto1082474@hotmail.com', '$2a$08$kfttK05BJS6n3bbMtR5qN.KGrldwwX0qN7QKwchyZJsBQcBLWUx1O', 'roberto');
+  INSERT INTO `usuarios` (`id_usuario`, `Name`, `APP`, `APM`, `Email`, `Pass`, `username`) VALUES
+  (12, 'Alberto', 'Gutierrez', 'Oropeza', 'bet68guti@gmail.com', '$2a$08$Wc0lX3aWaS/3eqQ9uthUWuD0FwV5SV0BSHzGqbkNf/mxdLHHnM.pO', 'AlbertoGuti'),
+  (13, 'Alberto', 'Gutierrez', 'Oropeza', 'oropezabeto68@gmail.com', '$2a$08$r1/9Mq8RtN4eaiewbXtPReZp3Ba.GvZkn4tz9aGo1ikXiE5/lx8UO', 'betho'),
+  (14, 'Alberto', 'Gutierrez', 'Oropeza', 'beto1082474@hotmail.com', '$2a$08$kfttK05BJS6n3bbMtR5qN.KGrldwwX0qN7QKwchyZJsBQcBLWUx1O', 'roberto');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

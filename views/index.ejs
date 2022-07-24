@@ -14,7 +14,10 @@
             window.location = 'login';
         </script>
      <%} %>
-    <h2 class="text-center my-3 titulo">Administrador de Pacientes de Veterinaria</h2>
+    <nav>
+        <h2 class="text-center my-3 titulo">Administrador de Pacientes de Veterinaria</h2>
+        <a href="/logout" class="btn btn-secondary fs-1 p-1 border-0 bg-primary" id="logout">Cerra Sección</a>
+    </nav>
     <div class="container mt-2 p-4" style="height: 95%">
         <div id="contenido" class="row">
             <div class="col-md-6 agregar-cita">
@@ -71,7 +74,7 @@
         </div> <!--.row-->
     </div><!--.container-->
 
-    <script src="resources/app.js"></script>
+    <script type="module" src="resources/js/app.js"></script>
                  
 </body>
 </html>

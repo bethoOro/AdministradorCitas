@@ -1,5 +1,12 @@
+import {eliminarCita, editarCita} from './app.js';
+
 // Clase para la interfaz
-export default class UI {
+class UI {
+
+    constructor() {
+        this.contenedorCitas = document.querySelector('#citas');
+    }
+
     imprimirAlerta(mensaje, tipo) {
         // Crear el div
         const divMensaje = document.createElement('div');
@@ -16,29 +23,34 @@ export default class UI {
         divMensaje.textContent = mensaje;
 
         // Agregar al DOM
-        document.querySelector('#contenido').insertBefore(divMensaje, document.querySelector('.agregar-cita'));
+        if(document.querySelector('div.alert')) {
+            document.querySelector('div.alert').remove();
+        }
 
-        // Quitar la alerta después de 4 segundos
-        setTimeout(() => {
-            divMensaje.remove();
-        }, 4000);
+        document.querySelector('#contenido').insertBefore(divMensaje, document.querySelector('.agregar-cita'));
+            // Quitar la alerta después de 4 segundos
+            setTimeout(() => {
+                divMensaje.remove();
+            }, 3000);
+        
     }
 
     
-    imprimirCitas({
-        citas
-    }) {
+    imprimirCitas(arrayCitas) {
+
+       
         this.limpiarHTML();
-        citas.forEach(cita => {
-            const {
-                mascota,
-                propietario,
-                telefono,
-                fecha,
-                hora,
-                sintomas,
-                id
-            } = cita;
+        
+        Array.from(arrayCitas).forEach(cita => {
+
+            const mascota = cita.Nombre_Mascota;
+            const propietario = cita.Propietario;
+            const telefono = cita.Telefono;
+            const antFecha = cita.FechaCita.split('T');
+            const fecha = antFecha[0];
+            const hora = cita.HoraCita;
+            const sintomas = cita.Sintomas;
+            const id = cita.id_cita;
 
             const divCita = document.createElement('div');
             divCita.classList.add('cita', 'p-3');
@@ -99,14 +111,17 @@ export default class UI {
             divCita.appendChild(btnEditar);
 
             // Agregar las citas HTML
-            contenedorCitas.appendChild(divCita);
+            this.contenedorCitas.appendChild(divCita);
         });
 
     }
 
     limpiarHTML() {
-        while (contenedorCitas.firstChild) {
-            contenedorCitas.removeChild(contenedorCitas.firstChild);
+        while (this.contenedorCitas.firstChild) {
+            this.contenedorCitas.removeChild(this.contenedorCitas.firstChild);
         }
     }
 }
+
+
+export const ui = new UI();
