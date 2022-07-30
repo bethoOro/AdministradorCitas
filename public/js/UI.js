@@ -1,6 +1,6 @@
 import {eliminarCita, editarCita} from './app.js';
 
-// Clase para la interfaz
+// Clase para la interfaz 
 class UI {
 
     constructor() {

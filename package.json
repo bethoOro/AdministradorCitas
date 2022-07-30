@@ -1,24 +1,28 @@
 {
-  "name": "proyectofinal",
+  "name": "administradorcitas",
   "version": "1.0.0",
   "description": "",
-  "main": "mysql.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "main": "app.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
-    "express": "^4.18.1",
     "express-session": "^1.17.3",
-    "mysql": "^2.18.1",
-    "sweetalert2": "^11.4.19"
+    "mysql": "^2.18.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.18"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bethoOro/AdministradorCitas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bethoOro/AdministradorCitas/issues"
+  },
+  "homepage": "https://github.com/bethoOro/AdministradorCitas#readme"
 }
