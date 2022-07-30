@@ -50,7 +50,6 @@ app.post("/register", async (req, res) => {
 
   // Encryptamos la contraseña
   let passwordHaash = await bcryptjs.hash(password, 8);
-  // const query = `INSERT INTO usuarios(Name, APP, APM, username, Email, Pass) VALUES(${name},${app},${apm},${username},${email},${passwordHaash})`
 
   conection.query(
     "INSERT INTO usuarios SET ?",
@@ -83,7 +82,6 @@ app.post("/register", async (req, res) => {
 app.post("/authe", async (req, res) => {
   const user = req.body.username;
   const password = req.body.password;
-  console.log(user);
 
   let pass = bcryptjs.hash(password, 8);
 
@@ -99,7 +97,6 @@ app.post("/authe", async (req, res) => {
             result.length == 0 ||
             !(await bcryptjs.compare(password, result[0].Pass))
           ) {
-            console.log("¡Usuario y/o password incorrecto!");
             res.render("login", {
               alert: true,
               alertTitle: "Error",
@@ -110,7 +107,6 @@ app.post("/authe", async (req, res) => {
               ruta: "login",
             });
           } else {
-            console.log("Autenticación correcta");
             req.session.loggedin = true;
             req.session.name = result[0].name;
             res.render("login", {
@@ -226,8 +222,4 @@ app.post("/updatecita", (req, res) => {
 
 app.listen((process.env.PORT || 5000), (req, res) => {
   console.log("Server Running in http://localhost:3000");
-  console.log(process.env.DB_USER);
-  console.log(process.env.DB_HOST);
-  console.log(process.env.DB_PASSWORD);
-  console.log(process.env.DB_DATABASE);
 });
