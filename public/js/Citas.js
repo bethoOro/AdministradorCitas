@@ -10,7 +10,7 @@ export default class Citas {
 
     eliminarCita(id) {
         try {
-            const url = 'http://localhost:3000/deletecitas';
+            const url = 'https://administrador-citas.herokuapp.com/deletecitas';
             fetch(url, {
                 method: 'POST',
                 body: JSON.stringify({id}),
@@ -29,7 +29,7 @@ export default class Citas {
     async editarCita( citaActualizada ) {
         // this.citas = this.citas.map( cita => cita.id === citaActualizada.id ? citaActualizada : cita );
         try {
-            const url = 'http://localhost:3000/updatecita';
+            const url = 'https://administrador-citas.herokuapp.com/updatecita';
             const respuesta = await fetch(url, {
                 method: 'POST',
                 body: JSON.stringify(citaActualizada),
@@ -48,7 +48,7 @@ export default class Citas {
     }
 
     async enviarInformacion(cita) {
-        const url = 'http://localhost:3000/newCita';
+        const url = 'https://administrador-citas.herokuapp.com/newCita';
         try {
             const repuesta = await fetch(url, {
                 method: 'POST', // or 'PUT'
@@ -68,7 +68,7 @@ export default class Citas {
     }
     
     obtenerCitas() {
-        const url = 'http://localhost:3000/citas';
+        const url = 'https://administrador-citas.herokuapp.com/citas';
         fetch(url)
         .then(respuesta => respuesta.json())
         .then(result => {
