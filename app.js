@@ -28,10 +28,6 @@ const conection = require("./database/db");
 const { query, application } = require("express");
 const { connect } = require("./database/db");
 
-// app.get('/', (req, res) => {
-//     res.render('index');
-// });
-
 app.get("/login", (req, res) => {
   res.render("login");
 });
@@ -159,8 +155,10 @@ app.post("/newCita", (req, res) => {
     conection.query(
       `INSERT INTO citas(Nombre_Mascota,Propietario,Telefono,FechaCita,HoraCita,Sintomas) VALUES("${mascota}","${propietario}","${telefono}",'${fecha}','${hora}:00',"${sintomas}")`, (err, result) => {
         if(err) {
+          console.log('Hubo un error');
           res.render('error')
         } else {
+          console.log('Todo correcto');
           res.send({ resultado: "Succesul" });
         }
       });
