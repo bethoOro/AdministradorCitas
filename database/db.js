@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { render } = require('ejs');
 const mysql = require('mysql');
 
