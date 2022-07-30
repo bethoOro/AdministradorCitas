@@ -1,6 +1,5 @@
 const { render } = require('ejs');
 const mysql = require('mysql');
-const query = 'SELECT * FROM cliente'
 
 const conection = mysql.createConnection({
     host: process.env.DB_HOTS,
