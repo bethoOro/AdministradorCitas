@@ -3,10 +3,10 @@ const { render } = require('ejs');
 const mysql = require('mysql');
 
 const conection = mysql.createConnection({
-    host: process.env.DB_HOTS,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE
+    host: 'b23lgb2aamwa1srfmh2u-mysql.services.clever-cloud.com',
+    user: 'uer7jbbksd4ua6ca',
+    password: 'kldJ26RxsF9l39gvZTfH',
+    database: 'b23lgb2aamwa1srfmh2u'
 });
 
 conection.connect( error => {
