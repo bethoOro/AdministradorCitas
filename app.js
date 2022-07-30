@@ -188,7 +188,6 @@ app.post("/deletecitas", (req, res) => {
         res.render('error')
       } else {
         console.log("Eliminado");
-        console.log(result);
         res.send({ Result: "Exito" });
       }
     }
