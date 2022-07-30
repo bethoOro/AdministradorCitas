@@ -24,7 +24,8 @@ app.use(
   })
 );
 
-const conection = require("./database/db");
+const crearConexion = require("./database/db");
+let conection;
 const { query, application } = require("express");
 const { connect } = require("./database/db");
 
@@ -124,6 +125,7 @@ app.post("/authe", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
+  conection = crearConexion();
   if (req.session.loggedin) {
     res.render("index", {
       login: true,

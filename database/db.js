@@ -9,13 +9,16 @@ const conection = mysql.createConnection({
     database: 'b23lgb2aamwa1srfmh2u'
 });
 
-conection.connect( error => {
-    if(error) {
-        console.log('wrong connection');
-    } else {
-        console.log('successful connection');
-    }
-    
-});
+function crearConexion() {
+    conection.connect( error => {
+        if(error) {
+            console.log('wrong connection');
+        } else {
+            console.log('successful connection');
+        }
+        
+    });
+    return conection;
+}
 
-module.exports = conection;
+module.exports = crearConexion;
