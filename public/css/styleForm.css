@@ -88,5 +88,6 @@ input {
         background: none;
         align-items: center;
         border: none;
+        justify-content: center;
     }
 }
