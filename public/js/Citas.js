@@ -4,8 +4,7 @@ import {ui} from './UI.js';
 export default class Citas {
 
     async agregarCita(cita) {
-        this.enviarInformacion({...cita});
-        this.obtenerCitas();
+        this.enviarInformacion({...cita})
     }
 
     eliminarCita(id) {
@@ -54,14 +53,13 @@ export default class Citas {
                 method: 'POST', // or 'PUT'
                 body: JSON.stringify(cita), // data can be `string` or {object}!
                 headers:{
-                  'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
                 },
                 mode: 'cors',
                 cache: 'default'
-              });
-              const resultado = await repuesta.json()
-              
-              
+            });
+            const resultado = await repuesta.json()
+            this.obtenerCitas()
         } catch {
             console.log('Error')
         }
