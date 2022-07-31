@@ -3,13 +3,13 @@ const { render } = require('ejs');
 const mysql = require('mysql');
 
 const conection = mysql.createConnection({
-    host: 'b23lgb2aamwa1srfmh2u-mysql.services.clever-cloud.com',
-    user: 'uer7jbbksd4ua6ca',
-    password: 'kldJ26RxsF9l39gvZTfH',
-    database: 'b23lgb2aamwa1srfmh2u'
+    host: 'mysql-citaveterinario.alwaysdata.net',
+    user: '275806',
+    password: 'beto251102',
+    database: 'citaveterinario_veterinario'
 });
 
-function crearConexion() {
+
     conection.connect( error => {
         if(error) {
             console.log('wrong connection');
@@ -18,7 +18,5 @@ function crearConexion() {
         }
         
     });
-    return conection;
-}
 
-module.exports = crearConexion;
+module.exports = conection;

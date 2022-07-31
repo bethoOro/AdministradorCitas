@@ -24,8 +24,8 @@ app.use(
   })
 );
 
-const crearConexion = require("./database/db");
-let conection;
+const conection = require("./database/db");
+
 const { query, application } = require("express");
 const { connect } = require("./database/db");
 
@@ -38,7 +38,7 @@ app.get("/register", (req, res) => {
 });
 
 app.post("/register", async (req, res) => {
-  conection = crearConexion()
+  // conection = crearConexion()
   const name = req.body.name;
   const app = req.body.app;
   const apm = req.body.apm;
@@ -78,7 +78,7 @@ app.post("/register", async (req, res) => {
 });
 
 app.post("/authe", async (req, res) => {
-  conection = crearConexion()
+  // conection = crearConexion()
   const user = req.body.username;
   const password = req.body.password;
 
@@ -127,7 +127,7 @@ app.post("/authe", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  conection = crearConexion();
+  // conection = crearConexion();
   if (req.session.loggedin) {
     res.render("index", {
       login: true,
