@@ -98,11 +98,6 @@ div.btn a {
   cursor: pointer;
 }
 
-
-
-
-
-
 @media screen and (max-width:600px) {
   .menu button {
     width: 2.5rem;
