@@ -16,7 +16,6 @@
     <%} %>
     <nav>
         <h2 class="text-center my-3 titulo">Administrador de Pacientes de Veterinaria</h2>
-        <a href="/logout" class="btn btn-secondary fs-1 p-1 border-0 bg-primary" id="logout">Cerra Sección</a>
     </nav>
     <div class="container mt-2 p-4" style="height: 95%">
         <div id="contenido" class="row">
@@ -71,10 +70,14 @@
                 <h2 id="administra" class="mb-4">Administra tus Citas</h2>
                 <ul id="citas" class="list-group lista-citas"></ul>
             </div>
+            <div class="menu" >
+                <button id="btn-menu"><img src="resources/img/lista.png" alt="icon-menu"></button>
+                <div class="btn menu" id="cerrar-sesion"><a href=""><img src="resources/img/cerrar-sesion.png" alt="icon-cerrar-sesion"></a></div>
+                <div class="btn menu" id="agregar-usuario"><a href=""><img src="resources/img/agregar-usuario.png" alt="icon-agregar-usuario"></a></div>
+            </div>
         </div> <!--.row-->
     </div><!--.container-->
 
-    <script type="module" src="resources/js/app.js"></script>
-                 
+    <script type="module" src="resources/js/app.js"></script> 
 </body>
 </html>

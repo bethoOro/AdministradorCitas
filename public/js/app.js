@@ -11,6 +11,7 @@ const telefonoInput = document.querySelector('#telefono');
 const fechaInput = document.querySelector('#fecha');
 const horaInput = document.querySelector('#hora');
 const sintomasInput = document.querySelector('#sintomas');
+const btnMenu = document.querySelector('#btn-menu')
 
 
 //  UI
@@ -32,6 +33,7 @@ function eventListener() {
     sintomasInput.addEventListener('input', datosCitas);
 
     formulario.addEventListener('submit', nuevaCita);
+    btnMenu.addEventListener('click', mostrarMenu);
 
 }
 
@@ -153,6 +155,11 @@ export function editarCita(cita) {
 
     editando = true;
 
+}
+
+function mostrarMenu(){
+    document.querySelector('#cerrar-sesion').classList.toggle('animacion-cerrar-sesion')
+    document.querySelector('#agregar-usuario').classList.toggle('animacion-agregar-usuario')
 }
 
 window.onload = () => {

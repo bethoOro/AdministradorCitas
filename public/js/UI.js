@@ -37,8 +37,6 @@ class UI {
 
     
     imprimirCitas(arrayCitas) {
-
-       
         this.limpiarHTML();
         
         Array.from(arrayCitas).forEach(cita => {
