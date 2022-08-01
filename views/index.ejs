@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administrador de Citas</title>
-    <link rel="stylesheet" href="resources/css/bootstrap.css">
-    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="resources/css/bootstrap.css" />
+    <link rel="stylesheet" href="resources/css/styles.css" />
+    <link rel="shortcut icon" href="resources/img/perro.png" type="image/x-icon">
 </head>
+
 <body>
-    <% if (!login) { %>                
-        <script>
-            window.location = 'login';
-        </script>
+    <% if (!login) { %>
+    <script>
+        window.location = "login";
+    </script>
     <%} %>
     <nav>
-        <h2 class="text-center my-3 titulo">Administrador de Pacientes de Veterinaria</h2>
+        <h2 class="text-center my-3 titulo">
+            Administrador de Pacientes de Veterinaria
+        </h2>
     </nav>
     <div class="container mt-2 p-4" style="height: 95%">
         <div id="contenido" class="row">
             <div class="col-md-6 agregar-cita">
-                <form id="nueva-cita"  >
+                <form id="nueva-cita">
                     <legend class="mb-4">Datos del Paciente</legend>
                     <div class="form-group row">
                         <label class="col-sm-4 col-lg-4 col-form-label">Nombre Mascota:</label>
                         <div class="col-sm-8 col-lg-8">
-                            <input type="text" id="mascota" name="mascota" class="form-control" placeholder="Nombre Mascota">
+                            <input type="text" id="mascota" name="mascota" class="form-control"
+                                placeholder="Nombre Mascota" />
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-4 col-lg-4 col-form-label">Propietario:</label>
                         <div class="col-sm-8 col-lg-8">
-                            <input type="text" id="propietario" name="propietario" class="form-control"  placeholder="Nombre Dueño de la Mascota">
+                            <input type="text" id="propietario" name="propietario" class="form-control"
+                                placeholder="Nombre Dueño de la Mascota" />
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-4 col-lg-4 col-form-label">Teléfono:</label>
                         <div class="col-sm-8 col-lg-8">
-                            <input type="tel" id="telefono" name="telefono" class="form-control"  placeholder="Número de Teléfono">
+                            <input type="tel" id="telefono" name="telefono" class="form-control"
+                                placeholder="Número de Teléfono" />
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-4 col-lg-4 col-form-label">Fecha:</label>
                         <div class="col-sm-8 col-lg-8">
-                            <input type="date" id="fecha" name="fecha" class="form-control">
+                            <input type="date" id="fecha" name="fecha" class="form-control" />
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-sm-4 col-lg-4 col-form-label">Hora:</label>
                         <div class="col-sm-8 col-lg-8">
-                            <input type="time" id="hora" name="hora" class="form-control">
+                            <input type="time" id="hora" name="hora" class="form-control" />
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-sm-4 col-lg-4 col-form-label">Sintomas:</label>
-                        <div class="col-sm-8 col-lg-8" >
-                            <textarea id="sintomas" name="sintomas" class="form-control" ></textarea>
+                        <div class="col-sm-8 col-lg-8">
+                            <textarea id="sintomas" name="sintomas" class="form-control"></textarea>
                         </div>
                     </div>
 
                     <div class="form-group">
-                            <button type="submit" class="btn btn-success w-100 d-block">Crear Cita</button>
+                        <button type="submit" class="btn btn-success w-100 d-block">
+                            Crear Cita
+                        </button>
                     </div>
                 </form>
             </div>
@@ -70,14 +80,23 @@
                 <h2 id="administra" class="mb-4">Administra tus Citas</h2>
                 <ul id="citas" class="list-group lista-citas"></ul>
             </div>
-            <div class="menu" >
-                <button id="btn-menu"><img src="resources/img/lista.png" alt="icon-menu"></button>
-                <div class="btn menu" id="cerrar-sesion"><a href="/logout"><img src="resources/img/cerrar-sesion.png" alt="icon-cerrar-sesion"></a></div>
-                <div class="btn menu" id="agregar-usuario"><a href="register"><img src="resources/img/agregar-usuario.png" alt="icon-agregar-usuario"></a></div>
+            <div class="menu">
+                <button id="btn-menu">
+                    <img src="resources/img/lista.png" alt="icon-menu" />
+                </button>
+                <div class="btn menu" id="cerrar-sesion">
+                    <a href="/logout"><img src="resources/img/cerrar-sesion.png" alt="icon-cerrar-sesion" /></a>
+                </div>
+                <div class="btn menu" id="agregar-usuario">
+                    <a href="register"><img src="resources/img/agregar-usuario.png" alt="icon-agregar-usuario" /></a>
+                </div>
             </div>
-        </div> <!--.row-->
-    </div><!--.container-->
+        </div>
+        <!--.row-->
+    </div>
+    <!--.container-->
 
-    <script type="module" src="resources/js/app.js"></script> 
+    <script type="module" src="resources/js/app.js"></script>
 </body>
+
 </html>

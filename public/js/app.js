@@ -1,5 +1,7 @@
 import Citas from './Citas.js';
-import {ui} from './UI.js';
+import {
+    ui
+} from './UI.js';
 
 // Instanaciar   
 const administrarCitas = new Citas();
@@ -75,7 +77,9 @@ function nuevaCita(e) {
         ui.imprimirAlerta('Editando Correctamente');
 
         // Pasar el objeto de la cita a edición
-        administrarCitas.editarCita( {...citaObje} );
+        administrarCitas.editarCita({
+            ...citaObje
+        });
 
         formulario.querySelector('button[type="submit"]').textContent = 'Crear Cita';
 
@@ -89,7 +93,7 @@ function nuevaCita(e) {
         });
         // Pasamos una capia del objeto, esto para que no se multiplequen las citas
 
-        ui.imprimirAlerta( 'Se agregó correctamente' );
+        ui.imprimirAlerta('Se agregó correctamente');
     }
 
 
@@ -121,7 +125,7 @@ export function eliminarCita(id) {
     ui.imprimirAlerta('Se elimino correctamente');
 
     // Actualizar citas
-   administrarCitas.obtenerCitas(); 
+    administrarCitas.obtenerCitas();
 }
 
 export function editarCita(cita) {
@@ -133,8 +137,8 @@ export function editarCita(cita) {
         id_cita
     } = cita;
 
-    const HoraCita = cita.HoraCita.slice(0,5);
-    const FechaCita = cita.FechaCita.slice(0,10)
+    const HoraCita = cita.HoraCita.slice(0, 5);
+    const FechaCita = cita.FechaCita.slice(0, 10)
 
     mascotaInput.value = Nombre_Mascota;
     propietarioInput.value = Propietario;
@@ -157,7 +161,7 @@ export function editarCita(cita) {
 
 }
 
-function mostrarMenu(){
+function mostrarMenu() {
     document.querySelector('#cerrar-sesion').classList.toggle('animacion-cerrar-sesion')
     document.querySelector('#agregar-usuario').classList.toggle('animacion-agregar-usuario')
 }
